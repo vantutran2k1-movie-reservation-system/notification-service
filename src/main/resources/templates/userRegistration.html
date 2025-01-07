@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to MovieHub</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #0056b3;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .content h2 {
+            color: #333333;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #666666;
+        }
+
+        .button {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button a {
+            background-color: #0056b3;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .footer a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<table class="container">
+    <tr>
+        <td>
+            <!-- Header -->
+            <div class="header">
+                <h1>Welcome to MovieHub</h1>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <h2>Hello, <span th:text="${userName}">User</span>!</h2>
+                <p>Thank you for registering with <strong>MovieHub</strong>. To complete your registration, please
+                    verify your email address by clicking the button below:</p>
+
+                <!-- Button -->
+                <div class="button">
+                    <a href="#" th:href="${verificationLink}">Verify My Email</a>
+                </div>
+
+                <p>If you did not sign up for this account, please ignore this email or contact our support team.</p>
+
+                <p>Thank you,<br>
+                    The MovieHub Team</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Need help? Visit our <a href="https://yourcompany.com/support" target="_blank">Support Center</a>.
+                </p>
+                <p>© 2025 MovieHub. All rights reserved.</p>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
