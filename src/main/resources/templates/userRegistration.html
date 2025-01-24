@@ -103,10 +103,14 @@
                 <p>Thank you for registering with <strong>MovieHub</strong>. To complete your registration, please
                     verify your email address by clicking the button below:</p>
 
-                <!-- Button -->
                 <div class="button">
                     <a href="#" th:href="${verificationLink}">Verify My Email</a>
                 </div>
+
+                <p>This is your verification token, it will expire in the next 60 minutes:</p>
+                <p style="font-weight: bold; font-size: 18px; text-align: center; color: #333;">
+                    <span th:text="${verificationToken}">Verification Token</span>
+                </p>
 
                 <p>If you did not sign up for this account, please ignore this email or contact our support team.</p>
 
